@@ -17,7 +17,8 @@ const styles = {
     footer: {
         backgroundColor: theme.palette.primary.light,
         padding: theme.spacing(1,0),
-        position: 'fixed',
+        marginTop:theme.spacing(5),
+        // position: 'fixed',
         left: '0',
         bottom:'0',
         width:'100%',

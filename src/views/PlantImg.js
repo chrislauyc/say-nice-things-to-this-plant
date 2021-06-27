@@ -9,22 +9,35 @@ const ms = 100;
 const sleep=(ms)=>{
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-const useStyles = makeStyles(()=>{
+const useStyles = makeStyles((theme)=>{
     return{
         container:{
             display:'flex',
             justifyContent: 'center',
             // border:'1px solid red',
-            width:'60%',
-            [theme.breakpoints.down('sm')]:{
+            width:'100%',
+            // [theme.breakpoints.down('sm')]:{
+            //     width:'100%'
+            // }
+
+        },
+        [theme.breakpoints.down('sm')]:{
+            img:{
                 width:'100%'
             }
         },
-        img:{
-            borderRadius:'30%',
-            // border:'1px solid red',
-            maxWidth:'100%'
-        }
+        [theme.breakpoints.up('md')]:{
+            img:{
+                position: 'absolute',
+                top: -28,
+                left: -28,
+                right: 0,
+                bottom: 0,
+                width: '100%',
+                maxWidth: 600,
+            }
+        },
+        
     };
 });
 const PlantImg=(props)=>{
