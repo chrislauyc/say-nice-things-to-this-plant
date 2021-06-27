@@ -16,18 +16,17 @@ const useStyles = makeStyles((theme)=>{
         container:{
             display:'flex',
             justifyContent: 'center',
-            // border:'1px solid red',
             width:'100%',
-            // [theme.breakpoints.down('sm')]:{
-            //     width:'100%'
-            // }
             position:'relative'
         },
         grow:{
             position:'absolute',
-            padding:theme.spacing(3),
-            margin:theme.spacing(2),
+            padding:theme.spacing(1),
+            margin:theme.spacing(1),
             zIndex:1
+        },
+        typography:{
+            fontSize:theme.typography.pxToRem(20)
         },
         [theme.breakpoints.down('sm')]:{
             img:{
@@ -38,10 +37,6 @@ const useStyles = makeStyles((theme)=>{
             grow:{
                 position:'absolute',
                 top: -60,
-                // left: -28,
-                // right: 0,
-                // bottom: 0,
-                // color:'red'
             },
             img:{
                 position: 'absolute',
@@ -91,7 +86,7 @@ const PlantImg=(props)=>{
         <>
             <Grow in={isPopUp&&popUpText!==''} className={classes.grow}>
                 <Paper elevation={4}>
-                    <Typography variant="h4" component="h2">
+                    <Typography variant="h6" component="h2" className={classes.typography}>
                         {popUpText}
                     </Typography>
                     {/* <svg className={classes.svg}>

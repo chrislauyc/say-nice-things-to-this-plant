@@ -37,10 +37,10 @@ function ProductHero(props) {
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Help your Plants Grow Better
+        Help Bobby Grow Better
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Show them love by giving compliments and positive words.
+        Show it love by giving compliments and positive words.
       </Typography>
       <Button
         color="secondary"
@@ -48,7 +48,7 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        href="#bobby"
       >
         Get Started
       </Button>
